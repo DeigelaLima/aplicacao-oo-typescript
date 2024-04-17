@@ -18,7 +18,7 @@ export class Cliente extends Pessoa implements IUsuario {
     }
 
     autenticar(): boolean {
-        throw new Error("Method not implemented.");
+        return true;
     }
 
 }
