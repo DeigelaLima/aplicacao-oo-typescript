@@ -1,19 +1,21 @@
+import { Conta } from "./conta";
 import { Endereco } from "./endereco";
 import { Pessoa } from "./pessoa";
 
 export class Cliente extends Pessoa implements IUsuario {
     
-    private vip: boolean;
-    private enderecos: Endereco[];
+    private _vip: boolean;
+    private _enderecos: Endereco[] = [];
+    private _conta: Conta [] = [];
 
-    constructor(cpf: string, nome: string, telefone: string, enderecos: Endereco[], vip: boolean) {
+    constructor(cpf: string, nome: string, telefone: string, vip: boolean, enderecos: Endereco[]) {
         super(cpf, nome, telefone);
-        this.enderecos = enderecos;
-        this.vip = vip;
+        this._enderecos = enderecos;
+        this._vip = vip;
     }
 
     public listarEnderecos(): Endereco[] {
-        return this.enderecos;
+        return this._enderecos;
 
     }
 

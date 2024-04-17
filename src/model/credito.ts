@@ -1,10 +1,13 @@
-export class Credito {
+import { Conta } from "./conta";
+
+export class Credito extends Conta {
 
     private _valor: number;
     private _data: number;
 
 
-    constructor(valor: number, data: number) {
+    constructor(_numero: string, valor: number, data: number) {
+        super(_numero);
         this._valor = valor;
         this._data = data;
     }

@@ -4,8 +4,8 @@ export class ContaCorrente extends Conta {
 
     private limite: number;
 
-    constructor(saldoInicial: number, limite: number) {
-        super(saldoInicial);
+    constructor(numero: string, limite: number) {
+        super(numero);
         this.limite = limite;
     }
 
@@ -23,6 +23,6 @@ export class ContaCorrente extends Conta {
     }
 
     calcularSaldo(): number {
-        return this.saldo + this.limite;
+        return this.saldo - this.limite;
     }
 }
