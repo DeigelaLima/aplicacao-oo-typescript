@@ -15,24 +15,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ContaCorrente = void 0;
+exports.ContaPoupanca = void 0;
 var conta_1 = require("./conta");
-var ContaCorrente = /** @class */ (function (_super) {
-    __extends(ContaCorrente, _super);
-    function ContaCorrente(numero, limite) {
-        var _this = _super.call(this, numero) || this;
-        _this.limite = limite;
-        return _this;
+var ContaPoupanca = /** @class */ (function (_super) {
+    __extends(ContaPoupanca, _super);
+    function ContaPoupanca() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    ContaCorrente.prototype.calcularSaldo = function () {
-        return _super.prototype.calcularSaldo.call(this) + this.limite;
+    ContaPoupanca.prototype.calcularSaldo = function () {
+        return _super.prototype.calcularSaldo.call(this);
     };
-    ContaCorrente.prototype.transferir = function (contaDestino, valor) {
-        if (valor > 0 && this.calcularSaldo() >= valor) {
-            this.sacar(valor); // retira da conta atual 
-            contaDestino.depositar(valor); // adiciona na conta destino
-        }
-    };
-    return ContaCorrente;
+    return ContaPoupanca;
 }(conta_1.Conta));
-exports.ContaCorrente = ContaCorrente;
+exports.ContaPoupanca = ContaPoupanca;

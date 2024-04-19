@@ -15,6 +15,9 @@ var Cargo = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    Cargo.prototype.toString = function () {
+        return "".concat(this.nome);
+    };
     return Cargo;
 }());
 exports.Cargo = Cargo;

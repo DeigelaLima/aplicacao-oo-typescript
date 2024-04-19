@@ -1,13 +1,11 @@
 import { Conta } from "./conta";
 
-export class Credito extends Conta {
+export class Credito {
 
     private _valor: number;
-    private _data: number;
+    private _data: Date;
 
-
-    constructor(_numero: string, valor: number, data: number) {
-        super(_numero);
+    constructor(valor: number, data: Date) {
         this._valor = valor;
         this._data = data;
     }
@@ -16,15 +14,8 @@ export class Credito extends Conta {
         return this._valor;
     }
 
-    public set valor(valor: number) {
-        this._valor = valor;
-    }
-
-    public get data(): number {
+    public get data(): Date {
         return this._data;
     }
 
-    public set data(data: number) {
-        this._data = data;
-    }
 }

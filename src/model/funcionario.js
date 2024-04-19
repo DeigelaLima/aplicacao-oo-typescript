@@ -17,7 +17,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Funcionario = void 0;
 var pessoa_1 = require("./pessoa");
-// import { IUsuario } from "./IUsuario";
 var Funcionario = /** @class */ (function (_super) {
     __extends(Funcionario, _super);
     function Funcionario(salario, cargo, cpf, nome, telefone) {
@@ -48,6 +47,9 @@ var Funcionario = /** @class */ (function (_super) {
     });
     Funcionario.prototype.autenticar = function () {
         return true;
+    };
+    Funcionario.prototype.toString = function () {
+        return "".concat(this.nome);
     };
     return Funcionario;
 }(pessoa_1.Pessoa));

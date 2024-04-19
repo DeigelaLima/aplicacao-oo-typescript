@@ -13,4 +13,8 @@ export class Cargo {
     public set nome(value: string) {
         this._nome = value;
     }
+
+    toString() {
+        return `${this.nome}`;
+    }
 }

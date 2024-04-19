@@ -1,6 +1,8 @@
 import { Conta } from "./conta";
+import { ContaCorrente } from "./contaCorrente";
 import { Endereco } from "./endereco";
 import { Pessoa } from "./pessoa";
+import { IUsuario } from "./IUsuario";
 
 export class Cliente extends Pessoa implements IUsuario {
     
@@ -16,11 +18,18 @@ export class Cliente extends Pessoa implements IUsuario {
 
     public listarEnderecos(): Endereco[] {
         return this._enderecos;
-
     }
 
     autenticar(): boolean {
         return true;
+    }
+
+    public adicionarConta(conta: Conta): void {
+        this._conta.push(conta);
+    }
+
+    public adicionarEndereco(endereco: Endereco): void {
+        this._enderecos.push(endereco);
     }
 
 }

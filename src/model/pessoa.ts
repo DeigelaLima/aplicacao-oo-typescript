@@ -9,4 +9,8 @@ export abstract class Pessoa {
         this._nome = nome;
         this._telefone = telefone;
     }
+
+    public get nome(): string { return this._nome; }
+
+    public set nome(value: string) { this._nome = value;}
 }

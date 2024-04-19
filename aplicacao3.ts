@@ -1,12 +1,11 @@
 import { Cliente } from "./src/model/cliente";
 import { ContaCorrente } from "./src/model/contaCorrente";
-import { Endereco } from "./src/model/endereco";
 
-
-const enderecoS =  new Endereco("63.123-43", "Rua Maria da Cruz", "342", "casa", "Quixadá", "Ce");
-const cliente = new Cliente("152.789.254-29", "Esmeralda Benvinda", "(88)9 8753-5362", true, [enderecoS]);
+const cliente = new Cliente("152.789.254-29", "Esmeralda Benvinda", "(88)9 8753-5362", true, []);
 
 const CC = new ContaCorrente("0987387-3", 0);
+
+cliente.adicionarConta(CC);
 
 // Efetue três depósitos de 100 na conta corrente
 CC.depositar(100);

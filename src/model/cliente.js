@@ -33,6 +33,12 @@ var Cliente = /** @class */ (function (_super) {
     Cliente.prototype.autenticar = function () {
         return true;
     };
+    Cliente.prototype.adicionarConta = function (conta) {
+        this._conta.push(conta);
+    };
+    Cliente.prototype.adicionarEndereco = function (endereco) {
+        this._enderecos.push(endereco);
+    };
     return Cliente;
 }(pessoa_1.Pessoa));
 exports.Cliente = Cliente;

@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var cargo_1 = require("./src/model/cargo");
 var funcionario_1 = require("./src/model/funcionario");
-// const cargoAtendente = new Cargo("Atendente");
-var atendente = new funcionario_1.Funcionario(1500, "Atendente", "054.952.004-28", "Antônia Serafina", "(88) 99986-4829");
-// const cargoGerente = new Cargo("Gerente");
-var gerente = new funcionario_1.Funcionario(3000, "Gerente", "894.654.789-59", "José Maria", "(88) 99986-7832");
+var cargoAtendente = new cargo_1.Cargo("atendente");
+var atendente = new funcionario_1.Funcionario(1500, cargoAtendente, "054.952.004-28", "Antônia Serafina", "(88) 99986-4829");
+var cargoPatrao = new cargo_1.Cargo("gerente");
+var gerente = new funcionario_1.Funcionario(3000, cargoPatrao, "894.654.789-59", "José Maria", "(88) 99986-7832");
 console.log(atendente);
 console.log(gerente);
